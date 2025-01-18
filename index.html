@@ -36,7 +36,6 @@
           <a href="#home" data-translate="home"> Home </a>
           <a href="#about" data-translate="about"> About </a>
           <a href="#projects" data-translate="projects">Projects </a>
-          <a href="#contact" data-translate="contact"> Contact </a>
         </div>
       </div>
     </div>
@@ -74,13 +73,19 @@
              blending creativity with technical expertise to create immersive gaming experiences.
          </p>
 
-         <div class="social_media">
-          <!-- itch.io icon -->
-          <a href="https://twould.itch.io"  target="_blank"><i class="fa-brands fa-itch-io"></i></a>  
-          <!-- Instagram icon -->
-          <a href="https://www.instagram.com/twouldx"  target="_blank"><i class="fa-brands fa-instagram"></i></a> 
-          <!-- YouTube icon -->
-          <a href="https://www.youtube.com/channel/yourchannelid"  target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <div class="social_media">
+            <!-- itch.io icon -->
+            <a href="https://twould.itch.io"  target="_blank"><i class="fa-brands fa-itch-io"></i></a>  
+            <!-- Instagram icon -->
+            <a href="https://www.instagram.com/twouldx"  target="_blank"><i class="fa-brands fa-instagram"></i></a> 
+            <!-- YouTube icon -->
+            <a href="https://www.youtube.com/channel/yourchannelid"  target="_blank"><i class="fa-brands fa-youtube"></i></a>
+
+            <button class="btn" id="copyEmailBtn">
+              <i class="fa-solid fa-envelope"></i> <span class="btn-text">My Email</span>
+            </button>
+            <div class="tooltip" id="tooltip">Email copied!</div>
+
           </div>
 
         </div>
@@ -189,35 +194,8 @@
         </div>
 
       </div>
-    </div>
-  </div>
 
-  <!--======== Contact ========-->
-  <div class="section contact" id="contact">
-
-    <div class="container flex-center">
-      <h2 data-translate="contact_section" class="section-title">Contact Me</h2>
-      <div class="contact-content">
-        <div class="contact-form-wrapper">
-            <div class="left_contact_form">
-                <input type="text" id="name" placeholder="Name" required dir="auto">
-                <input type="email" id="email" placeholder="Email" required dir="auto">
-                <input type="text" id="subject" placeholder="Subject" required dir="auto">
-            </div>
-            <div class="right_contact_form">
-                <textarea name="message" id="message" rows="4" placeholder="Message" required dir="auto"></textarea>
-                <div class="btn_area">
-                    <button data-translate="submit" class="btn" type="submit">
-                        <i class="fa-solid fa-paper-plane"></i> Send Message
-                    </button>
-                    <button class="btn" id="copyEmailBtn">
-                        <i class="fa-solid fa-envelope"></i> <span class="btn-text">My Email</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="tooltip" id="tooltip">Email copied!</div>
-    </div>
+      <h3 class="coming_soon">Great things coming soon</h3>
     </div>
   </div>
 

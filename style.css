@@ -497,7 +497,6 @@ section{
     width: clamp(3rem, 4vw, 6rem);
     height: clamp(3rem, 4vw, 6rem);
     font-size: clamp(1.3rem, 2vw, 3rem);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -512,6 +511,49 @@ section{
     background-color: var(--Sky-Blue-color);
     color: var(--dark-color1);
     transform: translateY(-3px);
+}
+
+.btn {
+  gap: clamp(0.8em, 1.4vw, 2em);
+  height: clamp(3rem, 4vw, 6rem);
+  position: relative;
+  color: var(--Sky-Blue-color);
+  background: none;
+  font-size: clamp(0.8em, 1.4vw, 2em);
+  font-weight: 500;
+  padding: clamp(13px, 1.6vw, 40px);
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--Sky-Blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--Sky-Blue-color);
+  color: var(--dark-color1);
+  transform: translateY(-3px);
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: fixed;
+  background: var(--Dark-Blue-color);
+  color: var(--white-color1);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.tooltip.show {
+  opacity: 1;
 }
 
 .about-content .circle{
@@ -611,7 +653,7 @@ section{
   text-align: center;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
   .about-content {
     display: flex;
     justify-content: center;
@@ -866,105 +908,13 @@ section{
   .filter-btn:hover:not(.active) {
     background: rgba(78, 204, 163, 0.15);
   }
-  
 
-/*======= Contact =======*/
-
-.contact {
-    position: relative;
-    padding: clamp(9rem, 12vw, 18rem) 0 1rem;
-}
-
-.contact .section-title{
-  top: -18%;
-}
-
-.contact-content {
-    width: 80%;
-    padding: clamp(40px, 4vw, 100px) 0;
-    position: relative;
-}
-
-.contact-form-wrapper {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.left_contact_form,
-.right_contact_form {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-content input, .contact-content textarea {
-  width: 100%;
-  border: none;
-  color: var(--white-color1);
-  background: linear-gradient(var(--textarea-white-color));
-  font-size: clamp(0.88em, 1.4vw, 2.2em);
-  margin-bottom: clamp(0.8rem, 1.6vw, 2rem);
-  padding: clamp(13px, 1.6vw, 40px);
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.contact-content textarea {
-    resize: none;
-    min-height: clamp(105px, 12vw, 300px);
-    margin-bottom: clamp(0.8rem, 1.6vw, 2rem);
-}
-
-.btn_area {
-    display: flex;
-    gap: clamp(0.8rem, 1.6vw, 2rem);
-}
-
-.btn {
-    position: relative;
-    background: var(--Dark-Blue-color);
-    color: var(--white-color1);
+  .coming_soon{
+    color: var(--white-color2);
     font-size: clamp(0.8em, 1.4vw, 2em);
-    font-weight: 500;
-    display: inline-block;
-    border: none;
-    padding: clamp(13px, 1.6vw, 40px);
-    letter-spacing: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-.btn:hover {
-    background: var(--Sky-Blue-color);
-}
-
-/* Tooltip styles */
-.tooltip {
-    position: fixed;
-    background: var(--Dark-Blue-color);
-    color: var(--white-color1);
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-}
-
-.tooltip.show {
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    
-    .btn_area {
-        flex-direction: column;
-    }
-}
+    font-weight: 300;
+    padding-top: 2%;
+  }
 
 /*======= Footer =======*/
 footer{

@@ -41,7 +41,7 @@ pressToStart.addEventListener("click", function() {
 });
 
 function updateDots() {
-  const totalDots = 18;
+  const totalDots = window.innerWidth <= 768 ? 10 : 18;
   dots = (dots + 1) % (totalDots + 1);
   const dotString = '.'.repeat(dots) + ' '.repeat(totalDots - dots);
   loading.textContent = `Loading ${dotString} ${Math.floor(progress)}%`;
@@ -100,17 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
           const rect = copyEmailBtn.getBoundingClientRect();
           tooltip.style.top = `${rect.top - 40}px`;
           tooltip.style.left = `${rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)}px`;
-          tooltip.classList.add('show');
-          
-          // Update button text temporarily
-          const btnText = copyEmailBtn.querySelector('.btn-text');
-          const originalText = btnText.textContent;
-          btnText.textContent = 'Email Copied!';
+          tooltip.classList.add('show');        
           
           // Reset after 2 seconds
           setTimeout(() => {
               tooltip.classList.remove('show');
-              btnText.textContent = originalText;
           }, 2000);
           
       } catch (err) {
