@@ -286,19 +286,8 @@ let ground_3 = document.getElementById('ground_3');
   });
 
   window.addEventListener("load", () => {
-    const savedTheme = localStorage.getItem("saved_theme");
-    const savedIcon = localStorage.getItem("saved_icon");
-
-    if(savedTheme){
-      document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark_theme");
-      themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
-
-      // Set the image source based on the saved theme
-      // setHomeImageSource();
-    }
 
     navBar.style.transform = "translateY(0)";
-    themeBtn.style.transform = "translateY(0)";
     updateActiveNavLinks();
   });
 
@@ -318,37 +307,6 @@ let ground_3 = document.getElementById('ground_3');
     link.addEventListener("click", () => {
       navigation.classList.remove("active");
     });
-  });
-
-  //Contact Form
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let formData = {
-      ct_name: ct_name.value,
-      ct_email: ct_email.value,
-      ct_subject: ct_subject.value,
-      ct_message: ct_message.value
-    }
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST","/");
-    xhr.setRequestHeader("content-type", "application/json");
-    xhr.onload = function(){
-      console.log(xhr.responseText);
-      if(xhr.responseText == "success"){
-        alert("Email sent");
-        ct_name.value = "";
-        ct_email.value = "";
-        ct_subject.value = "";
-        ct_message.value = "";
-      }else{
-        alert("Something went wrong!")
-      }
-    }
-
-    xhr.send(JSON.stringify(formData));
-
   });
 
 
