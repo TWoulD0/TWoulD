@@ -73,9 +73,7 @@ function startTransition() {
       clearInterval(dotsInterval);
       loading.style.display = 'none';
       
-      setTimeout(() => {
-        revealContent();
-      }, 300);
+      setTimeout(() => { }, 300);
     }, 500);
   }, 1000);
 }
@@ -314,15 +312,23 @@ let ground_3 = document.getElementById('ground_3');
     reset: true,
     distance: '60px',
     duration: 2500,
-    delay: 50
+    delay: 100,
+    opacity: 0
   });
   
-  ScrollReveal().reveal('.section-title', {delay: 100, origin: 'top'});
-  ScrollReveal().reveal('.about .folder_identity', {origin: 'bottom'});
-  ScrollReveal().reveal('.about .folder_about', {distance: '100px',delay: 100,origin: 'left'});
-  ScrollReveal().reveal('.about .folder_skills', {delay: 250,origin: 'right'});
-  ScrollReveal().reveal('.contact-form input, .contact-form textarea, .contact-form .btn', {distance: '150px', delay: 50, origin: 'bottom', interval: 300});
-  ScrollReveal().reveal('.contact-list li', {delay: 100, origin: 'left', interval: 200});
-  ScrollReveal().reveal('.logo h2', {distance: '100px',delay: 200, origin: 'left'});
-  ScrollReveal().reveal('.footer-copyright p', {distance: '20px', delay: 100, origin: 'bottom'});
-  ScrollReveal().reveal('.follow li', {delay: 300, origin: 'top', interval: 300});
+  ScrollReveal().reveal('.section-title', {origin: 'top'});
+
+  ScrollReveal().reveal('.about_text p', {distance: '200px',delay: 150, origin: 'left'});
+  ScrollReveal().reveal('.social_media a', {distance: '200px',delay: 250, origin: 'left', interval: 600});
+  ScrollReveal().reveal('.social_media .btn', {delay: 500, origin: 'bottom'});
+  ScrollReveal().reveal('.object', {delay: 400, origin: 'left'});
+  ScrollReveal().reveal('.toolbox h3', {delay: 200, distance: '0px'});
+  ScrollReveal().reveal('.toolbox_content', {delay: 300, distance: '0px'});
+
+  ScrollReveal().reveal('.project-card', {delay: 150, origin: 'bottom', interval: 300});
+  ScrollReveal().reveal('.coming_soon', {delay: 300, distance: '0px'});
+
+  ScrollReveal().reveal('.ft_logo', {distance: '100px', origin: 'left'});
+  ScrollReveal().reveal('.footer-container p', {origin: 'top'});
+  ScrollReveal().reveal('.footer-container .follow li', {origin: 'top', interval: 300});
+
