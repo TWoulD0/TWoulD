@@ -704,7 +704,7 @@ section{
     width: clamp(240px, 24vw, 600px);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(78, 204, 163, 0.1);
-    border-radius: 2vw;
+    border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
   }
@@ -716,7 +716,7 @@ section{
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 2vw;
+    border-radius: 20px;
     background: linear-gradient(135deg, rgba(78, 204, 163, 0.1), rgba(125, 95, 255, 0.1));
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -734,7 +734,7 @@ section{
   .project-image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 2vw 2vw 0 0;
+    border-radius: 20px 20px 0 0;
   }
 
   .project-image {
@@ -821,20 +821,15 @@ section{
     justify-content: center;
   }
 
-  .project-actions {
-    display: flex;
-    gap: clamp(0.4rem, 0.7vw, 1rem);
-  }
-
   .view-project {
+    text-decoration: none;
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
-    font-size: clamp(0.9rem, 1.4vw, 2.2rem);
+    gap: clamp(0.4rem, 0.7vw, 1rem);
     padding: clamp(0.4rem, 0.7vw, 1rem);
     background: linear-gradient(135deg, var(--Sky-Blue-color) 0%, var(--Sky-Blue-color2) 100%);
-    color: #1a1a2e;
-    text-decoration: none;
-    border-radius: 1vw;
+    border-radius: 10px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -860,24 +855,16 @@ section{
     left: 100%;
   }
 
-  .project-stats {
-    display: flex;
-    gap: 0.7rem;
-    margin-left: clamp(0.8rem, 1.4vw, 2rem);
-    padding-left: clamp(0.8rem, 1.4vw, 2rem);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  .view-project i{
+    color: #1a1a2e;
+    font-size: clamp(0.9rem, 1.4vw, 2.2rem);
+    position: relative;
+    top: 1px;
   }
 
-  .stat {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.4rem, 0.7vw, 1rem);
-    color: #b8b8b8;
-    font-size: clamp(0.65rem, 1vw, 1.6rem);
-  }
-
-  .stat-icon {
-    color: var(--Sky-Blue-color2);
+  .view-project h4{
+    color: #1a1a2e;
+    font-size: clamp(0.9rem, 1.4vw, 2.2rem);
   }
 
   /* Filter buttons */
