@@ -37,7 +37,7 @@ pressToStart.addEventListener("click", function() {
   window.scrollTo(0, 0);
 
   // Start the progress update
-  setTimeout(updateProgress, 1000);
+  setTimeout(updateProgress, 100);
 });
 
 function updateDots() {
@@ -56,7 +56,7 @@ function updateProgress() {
 
       startTransition();
     } else {
-      setTimeout(updateProgress, Math.random() * 300 + 100);
+      setTimeout(updateProgress, Math.random() * 200);
       document.body.style.overflowY = 'hidden';
     }
   }
