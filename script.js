@@ -319,8 +319,8 @@ let ground_3 = document.getElementById('ground_3');
   ScrollReveal().reveal('.section-title', {origin: 'top'});
 
   ScrollReveal().reveal('.about_text p', {distance: '200px',delay: 150, origin: 'left'});
-  ScrollReveal().reveal('.social_media a', {distance: '200px',delay: 250, origin: 'left', interval: 600});
-  ScrollReveal().reveal('.social_media .btn', {delay: 500, origin: 'bottom'});
+  ScrollReveal().reveal('.social_media .small_btns a', {distance: '200px',delay: 250, origin: 'left', interval: 600});
+  ScrollReveal().reveal('.social_media .cv_btn', {delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.object', {delay: 400, origin: 'left'});
   ScrollReveal().reveal('.toolbox h3', {delay: 200, distance: '0px'});
   ScrollReveal().reveal('.toolbox_content', {delay: 300, distance: '0px'});
