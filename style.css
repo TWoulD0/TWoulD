@@ -492,7 +492,7 @@ section{
   justify-content: flex-start;
 }
 
-.social_media .small_btns {
+.about_text .social_media .small_btns {
   display: flex;
   gap: clamp(0.8rem, 2vw, 3rem);
   justify-content: flex-start;
